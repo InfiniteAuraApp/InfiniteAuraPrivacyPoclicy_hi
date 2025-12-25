@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Politique de confidentialité — Infinite Aura</title>
+
+  <!-- App / Site Icon (Infinite Aura) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://infiniteauraapp.github.io/InfiniteAuraPrivacyPoclicy_fr/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://infiniteauraapp.github.io/InfiniteAuraPrivacyPoclicy_fr/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://infiniteauraapp.github.io/InfiniteAuraPrivacyPoclicy_fr/favicon-16x16.png">
+  <link rel="shortcut icon" href="https://infiniteauraapp.github.io/InfiniteAuraPrivacyPoclicy_fr/favicon.ico">
+
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="msapplication-TileColor" content="#0b0c10">
+
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --surface: rgba(255,255,255,.05);
+      --surface2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.93);
+      --muted: rgba(255,255,255,.72);
+      --border: rgba(255,255,255,.12);
+      --accent: #7c5cff;
+      --accent2: #25d366;
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+
+      --pad: clamp(14px, 1.6vw, 22px);
+      --gap: clamp(12px, 1.4vw, 18px);
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --surface: rgba(0,0,0,.045);
+        --surface2: rgba(0,0,0,.065);
+        --text: rgba(0,0,0,.92);
+        --muted: rgba(0,0,0,.64);
+        --border: rgba(0,0,0,.12);
+        --shadow: 0 14px 34px rgba(0,0,0,.12);
+      }
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    html{ scroll-behavior:smooth; }
+
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      line-height: 1.9;
+      background:
+        radial-gradient(900px 650px at 15% -10%, rgba(124,92,255,.30), transparent 60%),
+        radial-gradient(800px 600px at 100% 10%, rgba(37,211,102,.16), transparent 60%),
+        var(--bg);
+    }
+
+    a{ color: var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    /* Accessibility */
+    :focus-visible{
+      outline: 3px solid rgba(124,92,255,.55);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+
+    .skip{
+      position:absolute;
+      top:-60px;
+      left:16px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding:10px 12px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: top .2s ease;
+      z-index: 50;
+    }
+    .skip:focus{ top: 14px; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 16px 70px;
+    }
+
+    header.hero{
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 8px);
+      background:
+        linear-gradient(135deg, rgba(124,92,255,.22), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      padding: calc(var(--pad) + 6px);
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero::after{
+      content:"";
+      position:absolute;
+      inset:-60px -70px auto auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.26), transparent 55%);
+      transform: rotate(18deg);
+      pointer-events:none;
+      filter: blur(.2px);
+    }
+
+    .brand{
+      display:flex;
+      gap: 14px;
+      align-items:flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .brand h1{
+      margin: 0;
+      font-size: clamp(22px, 2.6vw, 36px);
+      letter-spacing: .2px;
+      line-height: 1.25;
+    }
+
+    .meta{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .pill{
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.03);
+      white-space: nowrap;
+      backdrop-filter: blur(8px);
+    }
+
+    .btnRow{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items:center;
+      margin-top: 4px;
+    }
+
+    button{
+      font-family: inherit;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      backdrop-filter: blur(8px);
+    }
+    button:hover{
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.18);
+      transform: translateY(-1px);
+    }
+    button:active{ transform: translateY(0); }
+
+    .muted{ color: var(--muted); }
+    .small{ font-size: 13px; color: var(--muted); }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: var(--gap);
+      margin-top: var(--gap);
+      align-items:start;
+    }
+    @media (min-width: 980px){
+      .grid{ grid-template-columns: 360px 1fr; }
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .card-h{
+      padding: 14px 14px 12px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.02);
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .card-h h2{
+      margin: 0;
+      font-size: 16px;
+      color: var(--text);
+      letter-spacing: .2px;
+    }
+
+    .card-b{ padding: 14px; }
+
+    /* TOC */
+    .tocWrap{
+      position: relative;
+    }
+
+    @media (min-width: 980px){
+      .tocWrap{
+        position: sticky;
+        top: 18px;
+        max-height: calc(100vh - 36px);
+        overflow: auto;
+        scrollbar-width: thin;
+      }
+    }
+
+    .toc a{
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: background .12s ease, border-color .12s ease, transform .12s ease;
+    }
+    .toc a:hover{
+      background: var(--surface2);
+      border-color: var(--border);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .toc a.active{
+      background: rgba(124,92,255,.16);
+      border-color: rgba(124,92,255,.35);
+      box-shadow: 0 0 0 4px rgba(124,92,255,.10) inset;
+    }
+
+    /* Content */
+    main article{
+      padding: 16px;
+    }
+
+    /* Readability: max text width inside article */
+    .prose{
+      max-width: 78ch;
+      margin-inline: auto;
+      padding-bottom: 4px;
+    }
+
+    /* ========== Policy Accordion Sections ========== */
+    details.policy-sec{
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+      scroll-margin-top: 96px;
+    }
+
+    details.policy-sec:last-child{
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+
+    details.policy-sec > summary{
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding: 12px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      transition: background .12s ease, transform .12s ease, border-color .12s ease;
+    }
+
+    details.policy-sec > summary:hover{
+      background: var(--surface2);
+      border-color: rgba(255,255,255,.18);
+      transform: translateY(-1px);
+    }
+
+    details.policy-sec > summary::-webkit-details-marker{ display:none; }
+
+    details.policy-sec > summary .title{
+      font-size: clamp(18px, 1.5vw, 20px);
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: .15px;
+      margin: 0;
+    }
+
+    details.policy-sec > summary::after{
+      content: "▾";
+      font-size: 18px;
+      opacity: .8;
+      transform: translateY(-1px);
+      transition: transform .14s ease;
+    }
+
+    details.policy-sec[open] > summary{
+      background: rgba(124,92,255,.10);
+      border-color: rgba(124,92,255,.35);
+      box-shadow: 0 0 0 4px rgba(124,92,255,.10) inset;
+      transform: none;
+    }
+
+    details.policy-sec[open] > summary::after{
+      transform: rotate(180deg);
+    }
+
+    details.policy-sec .sec-body{
+      padding: 12px 4px 6px;
+    }
+
+    h3{
+      margin: 0 0 10px;
+      font-size: clamp(18px, 1.5vw, 20px);
+      line-height: 1.35;
+      letter-spacing: .15px;
+    }
+
+    p{ margin: 0 0 10px; }
+
+    ul,ol{
+      margin: 10px 0;
+      padding: 0 0 0 18px;
+    }
+    li{ margin: 8px 0; }
+
+    code{
+      font-family: var(--mono);
+      font-size: 0.92em;
+      padding: 2px 6px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      direction: ltr;
+      unicode-bidi: plaintext;
+    }
+
+    .callout{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin: 12px 0;
+    }
+    .callout strong{ display:block; margin-bottom: 6px; }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 13px;
+      margin: 4px 6px 4px 0;
+      white-space: nowrap;
+    }
+    .badge i{
+      width: 10px; height: 10px; border-radius: 999px; display:inline-block;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(124,92,255,.16);
+    }
+    .badge.ok i{ background: #25d366; box-shadow: 0 0 0 4px rgba(37,211,102,.15); }
+    .badge.warn i{ background: #ffb020; box-shadow: 0 0 0 4px rgba(255,176,32,.15); }
+    .badge.bad i{ background: #ff4d4f; box-shadow: 0 0 0 4px rgba(255,77,79,.15); }
+
+    /* Inner details only (not policy sections) */
+    .prose details:not(.policy-sec){
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      padding: 10px 12px;
+      margin: 12px 0;
+    }
+    .prose details[open]:not(.policy-sec){
+      background: rgba(255,255,255,.04);
+    }
+    .prose details:not(.policy-sec) > summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+    }
+    .prose details:not(.policy-sec) > summary::-webkit-details-marker{ display:none; }
+
+    .hr{
+      height: 1px;
+      background: var(--border);
+      margin: 12px 0;
+    }
+
+    .footer{
+      margin-top: var(--gap);
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 14px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Mobile TOC (optional collapsible wrapper) */
+    .tocMobile{
+      display:none;
+    }
+    @media (max-width: 979px){
+      .tocMobile{ display:block; margin-top: var(--gap); }
+      .tocDesktop{ display:none; }
+      main article{ padding: 14px; }
+    }
+
+    /* Print */
+    @media print{
+      body{ background:#fff; color:#000; }
+      .card, header.hero, .footer{ box-shadow:none; }
+      a{ color:#000; text-decoration: underline; }
+      .btnRow, .skip{ display:none; }
+      .tocDesktop{ display:none; }
+      .tocMobile{ display:none; }
+      .prose{ max-width: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior:auto; }
+      button, .toc a{ transition:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <div>
+          <h1>Politique de confidentialité — Infinite Aura</h1>
+          <div class="meta">
+            <span class="pill">Dernière mise à jour : <strong id="lastUpdated">25 décembre 2025</strong></span>
+          </div>
+        </div>
+
+        <div class="btnRow">
+          <button type="button" onclick="window.print()">Imprimer / Enregistrer en PDF</button>
+          <button type="button" onclick="toggleAll(true)">Ouvrir toutes les sections</button>
+          <button type="button" onclick="toggleAll(false)">Fermer toutes les sections</button>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px">
+        Cette politique explique comment l’application <strong>Infinite Aura</strong> collecte, utilise et protège vos données.
+        Elle est conçue pour être claire et compréhensible et — autant que possible — alignée sur les exigences de la
+        Loi jordanienne sur la protection des données personnelles n° 24 de 2023 (en vigueur depuis le 17 mars 2024).
+      </p>
+    </header>
+
+    <!-- Mobile TOC -->
+    <details class="card tocMobile">
+      <summary class="card-h" style="user-select:none">
+        <h2 style="margin:0; font-size:16px">Sommaire rapide</h2>
+        <span class="small">Appuyez pour ouvrir</span>
+      </summary>
+      <div class="card-b toc" id="tocMobile">
+        <a href="#s1">1) Qui sommes-nous et qui est le « Responsable du traitement » ?</a>
+        <a href="#s2">2) Portée de cette politique et définitions clés</a>
+        <a href="#s3">3) Données que nous collectons (en détail)</a>
+        <a href="#s3a">3-A) Documents de vérification et de conformité du centre</a>
+        <a href="#s4">4) Pourquoi traitons-nous vos données ? (finalités)</a>
+        <a href="#s5">5) Base légale du traitement (Jordanie)</a>
+        <a href="#s6">6) Données sensibles et données des enfants</a>
+        <a href="#s7">7) Chiffrement et sécurité (E2EE)</a>
+        <a href="#s8">8) Partage des données et qui peut y accéder ?</a>
+        <a href="#s8a">8-A) Prestataires (sous-traitants) et partage des données</a>
+        <a href="#s9">9) Notifications, FCM et communications</a>
+        <a href="#s10">10) Localisation et Google Maps</a>
+        <a href="#s11">11) Conservation et suppression des données</a>
+        <a href="#s12">12) Vos droits au regard de la loi jordanienne</a>
+        <a href="#s13">13) Transferts internationaux de données (hors Jordanie)</a>
+        <a href="#s13a">13-A) Utilisateurs hors de Jordanie (portée internationale)</a>
+        <a href="#s14">14) Comment nous contacter (réclamations et demandes)</a>
+        <a href="#s15">15) Modifications de la politique</a>
+      </div>
+    </details>
+
+    <div class="grid">
+      <!-- Desktop TOC -->
+      <aside class="card tocDesktop">
+        <div class="card-h">
+          <h2>Sommaire rapide</h2>
+          <span class="small">Cliquez pour accéder</span>
+        </div>
+        <div class="card-b toc tocWrap" id="toc">
+          <a href="#s1">1) Qui sommes-nous et qui est le « Responsable du traitement » ?</a>
+          <a href="#s2">2) Portée de cette politique et définitions clés</a>
+          <a href="#s3">3) Données que nous collectons (en détail)</a>
+          <a href="#s3a">3-A) Documents de vérification et de conformité du centre</a>
+          <a href="#s4">4) Pourquoi traitons-nous vos données ? (finalités)</a>
+          <a href="#s5">5) Base légale du traitement (Jordanie)</a>
+          <a href="#s6">6) Données sensibles et données des enfants</a>
+          <a href="#s7">7) Chiffrement et sécurité (E2EE)</a>
+          <a href="#s8">8) Partage des données et qui peut y accéder ?</a>
+          <a href="#s8a">8-A) Prestataires (sous-traitants) et partage des données</a>
+          <a href="#s9">9) Notifications, FCM et communications</a>
+          <a href="#s10">10) Localisation et Google Maps</a>
+          <a href="#s11">11) Conservation et suppression des données</a>
+          <a href="#s12">12) Vos droits au regard de la loi jordanienne</a>
+          <a href="#s13">13) Transferts internationaux de données (hors Jordanie)</a>
+          <a href="#s13a">13-A) Utilisateurs hors de Jordanie (portée internationale)</a>
+          <a href="#s14">14) Comment nous contacter (réclamations et demandes)</a>
+          <a href="#s15">15) Modifications de la politique</a>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="card" id="content">
+        <div class="card-h">
+          <h2>Texte de la politique</h2>
+        </div>
+
+        <article>
+          <div class="prose">
+
+<!-- ===================== POLICY SECTIONS (Accordion) ===================== -->
+<details class="policy-sec" id="s1">
+  <summary><span class="title">1) Qui sommes-nous et qui est le « Responsable du traitement » ?</span></summary>
+  <div class="sec-body">
+    <p>
+      <strong>Infinite Aura</strong> (l’« Application ») est un système intelligent qui prend en charge le dépistage préliminaire de l’autisme et la gestion
+      des sessions, thérapies, réservations et communications entre les parties (tuteur, centre, formateur, administration).
+    </p>
+    <div class="callout">
+      <strong>Responsable du traitement :</strong>
+      <p class="muted" style="margin:0">
+        <strong>Infinite Aura</strong><br/>
+        Adresse : <strong>Jordanie — Gouvernorat d’Aqaba</strong><br/>
+        Email confidentialité : <strong>app.asd.cure@gmail.com</strong><br/>
+        Téléphone/WhatsApp : <strong style="direction: ltr; text-align: left;">+962 77 735 2268</strong>
+      </p>
+    </div>
+  </div>
+</details>
+
+<details class="policy-sec" id="s2">
+  <summary><span class="title">2) Portée de cette politique et définitions clés</span></summary>
+  <div class="sec-body">
+    <p>Cette politique s’applique :</p>
+    <ul>
+      <li>À l’application mobile Infinite Aura (Android/iOS) et à toutes interfaces associées.</li>
+      <li>Aux données créées dans l’application ou envoyées via le support.</li>
+    </ul>
+
+    <details>
+      <summary>Définitions rapides</summary>
+      <div class="hr"></div>
+      <ul>
+        <li><strong>Données personnelles :</strong> Toute information qui identifie une personne physique directement ou indirectement (ex. : nom, email, localisation…).</li>
+        <li><strong>Données sensibles :</strong> Incluent des données relatives à l’état de santé/condition physique ou mentale, des données biométriques, etc.</li>
+        <li><strong>Utilisateur :</strong> Tuteur / Centre / Formateur / Admin / Sous-admin.</li>
+        <li><strong>Individu :</strong> L’enfant/la personne pour qui des sessions et des résultats sont enregistrés dans l’application.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<details class="policy-sec" id="s3">
+  <summary><span class="title">3) Données que nous collectons</span></summary>
+  <div class="sec-body">
+    <p><span class="badge"><i></i>Compte utilisateur</span></p>
+    <ul>
+      <li><strong>Données d’inscription / de connexion :</strong> Email, mot de passe (gérés via Firebase Auth) et/ou vérification OTP par email.</li>
+      <li><strong>Données de contact facultatives :</strong> Numéro de téléphone (pour vérification SMS), pays/indicatif pays, langue préférée.</li>
+      <li><strong>Rôle et autorisations :</strong> Tuteur / Centre / Formateur / Admin / Sous-admin.</li>
+    </ul>
+
+    <p><span class="badge warn"><i></i>Profil de l’individu (enfant/personne)</span></p>
+    <ul>
+      <li>Prénom et nom, sexe, date de naissance (facultative selon l’usage), notes.</li>
+      <li>Photo de profil de l’individu (facultative) téléversée dans le stockage cloud.</li>
+      <li>Données du tuteur dans le profil de l’individu (facultatif) : nom / lien / email.</li>
+      <li>Données de planification : heure de la prochaine session et rappel avant celle-ci (lors de l’utilisation des rappels).</li>
+    </ul>
+
+    <p><span class="badge bad"><i></i>Sessions et résultats de « dépistage/suivi »</span></p>
+    <ul>
+      <li>Photo de session (utilisée pour l’analyse sur l’appareil, puis téléversée <strong>chiffrée</strong> dans le stockage).</li>
+      <li>Réponses du questionnaire/activité stockées <strong>chiffrées</strong> dans la base de données.</li>
+      <li>Scores/indicateurs (p. ex., photo_score / questionnaire_score / combined_score…)</li>
+    </ul>
+
+    <p><span class="badge"><i></i>Réservations et communication avec les centres</span></p>
+    <ul>
+      <li>Demande de réservation : nom du tuteur, email, texte du message, horaire souhaité, et horaire final du rendez-vous lors de l’approbation/reprogrammation.</li>
+      <li>Statut de la demande : pending / approved / rejected / rescheduled et le motif de refus le cas échéant.</li>
+    </ul>
+
+    <p><span class="badge"><i></i>Notifications</span></p>
+    <ul>
+      <li>Jetons d’appareil Firebase Cloud Messaging (FCM) pour livrer les notifications.</li>
+      <li>Historique des notifications dans l’application (titre/texte/heure/lien interne) si activé.</li>
+    </ul>
+
+    <p><span class="badge"><i></i>Données publiques du centre (Annuaire des centres)</span></p>
+    <ul>
+      <li>Description du centre, adresse, jours/heures d’ouverture, numéro de téléphone, lien du site web et lien Google Maps.</li>
+      <li>Ces données apparaissent publiquement dans « l’Annuaire des centres » lorsque le centre choisit de publier.</li>
+    </ul>
+
+    <details>
+      <summary>Collectons-nous des « données de l’appareil », des « analyses » ou de la « publicité » ?</summary>
+      <div class="hr"></div>
+      <p class="muted">
+        Nous n’affichons pas de publicités ciblées par défaut et nous ne vendons pas vos données. Les systèmes d’exploitation/boutiques d’applications peuvent collecter
+        des données techniques standard (comme le type d’appareil/la version de l’OS) à des fins de sécurité et d’exploitation.
+      </p>
+    </details>
+  </div>
+</details>
+
+<details class="policy-sec" id="s3a">
+  <summary><span class="title">3-A) Documents de vérification et de conformité du centre</span></summary>
+  <div class="sec-body">
+    <p>
+      Lors de l’enregistrement d’un compte « Centre » ou lorsqu’une reverification est demandée, nous pouvons demander au centre de téléverser des documents
+      prouvant l’identité/la licence du centre à des fins de vérification et de conformité (p. ex., licence/enregistrement/documents officiels,
+      selon le cas).
+    </p>
+
+    <div class="callout">
+      <strong>Que peut inclure ce type de données ?</strong>
+      <ul class="muted" style="margin:0; padding-left:18px">
+        <li>Images/fichiers de documents officiels téléversés par le centre pour vérification.</li>
+        <li>Métadonnées opérationnelles liées au document (nom du fichier, type, taille, heure de téléversement et statut de vérification).</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <strong>Qui peut y accéder ?</strong>
+      <p class="muted" style="margin:0">
+        L’accès est limité au compte du centre lui-même et aux comptes administratifs autorisés dans le système
+        (comme admin/sous-admin selon les autorisations) pour l’examen et les décisions de vérification.
+      </p>
+    </div>
+
+    <p class="muted">
+      Nous conservons les documents de vérification aussi longtemps que nécessaire pour la vérification ou la conformité. Ils peuvent être supprimés ou remplacés après approbation,
+      lors d’un nouveau téléversement ou lors de la suppression du compte, sous réserve d’obligations légales de conservation (le cas échéant).
+    </p>
+  </div>
+</details>
+
+<details class="policy-sec" id="s4">
+  <summary><span class="title">4) Pourquoi traitons-nous vos données ? (finalités)</span></summary>
+  <div class="sec-body">
+    <ul>
+      <li>Créer des comptes, se connecter et vérifier (email/OTP/téléphone).</li>
+      <li>Gérer les profils d’individus, les sessions, les résultats et suivre les progrès dans le temps.</li>
+      <li>Envoyer des notifications opérationnelles : rappel de session, mises à jour du statut de réservation, partage d’individu, etc.</li>
+      <li>Activer l’Annuaire des centres, les réservations et la communication directe.</li>
+      <li>Protéger contre les abus, enquêter sur les plantages et améliorer les performances.</li>
+      <li>Se conformer aux exigences légales/réglementaires lorsque nécessaire.</li>
+    </ul>
+  </div>
+</details>
+
+<details class="policy-sec" id="s5">
+  <summary><span class="title">5) Base légale du traitement (Jordanie)</span></summary>
+  <div class="sec-body">
+    <p>
+      En vertu de la Loi jordanienne sur la protection des données personnelles n° 24 de 2023, le traitement repose principalement sur le
+      <strong>consentement préalable</strong> de la personne concernée, sauf exceptions prévues par la loi.
+    </p>
+    <div class="callout">
+      <strong>Comment nous appliquons cela en pratique dans l’application :</strong>
+      <ul class="muted" style="margin:0; padding-left:18px">
+        <li>Vous fournissez volontairement des données (créer un compte / ajouter un individu / téléverser une photo / envoyer une demande de réservation).</li>
+        <li>Les autorisations système (caméra/localisation/notifications) ne fonctionnent qu’après votre consentement au niveau de l’appareil.</li>
+        <li>Vous pouvez retirer votre consentement en désactivant les autorisations ou en demandant la suppression (voir « Droits »).</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<details class="policy-sec" id="s6">
+  <summary><span class="title">6) Données sensibles et données des enfants</span></summary>
+  <div class="sec-body">
+    <p>
+      L’application traite des données susceptibles d’être considérées comme « sensibles » car elles concernent la santé/la condition mentale et peuvent inclure
+      des données biométriques (telles qu’une image du visage utilisée pour l’analyse sur l’appareil).
+    </p>
+    <p class="muted">
+      L’utilisation de l’application pour ajouter des données d’un enfant/mineur doit être effectuée par un parent/tuteur légal ou avec son consentement.
+      Nous ne cherchons pas à collecter des données directement auprès d’enfants sans supervision du tuteur.
+    </p>
+
+    <details open>
+      <summary>Nos engagements concernant les enfants / les personnes sans capacité légale</summary>
+      <div class="hr"></div>
+      <ul>
+        <li>Nous supposons que le tuteur est celui qui crée le profil et consent à la saisie des données de l’enfant dans l’application.</li>
+        <li>Nous limitons le partage du profil et des résultats de l’enfant aux parties liées dans l’application (tuteur/centre/formateur) selon des autorisations claires.</li>
+        <li>Le tuteur peut demander l’accès/la modification/la suppression à tout moment.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<details class="policy-sec" id="s7">
+  <summary><span class="title">7) Chiffrement et sécurité (E2EE)</span></summary>
+  <div class="sec-body">
+    <p>
+      Certains contenus dans Infinite Aura sont hautement sensibles (photo de session et réponses au questionnaire).
+      Par conséquent, nous appliquons un <strong>chiffrement de bout en bout (E2EE)</strong> à ces éléments spécifiques :
+    </p>
+
+    <div class="callout">
+      <strong>Comment fonctionne le chiffrement dans l’application (résumé technique clair) :</strong>
+      <ul class="muted" style="margin:0; padding-left:18px">
+        <li>Une <strong>clé de données unique par session</strong> est générée (32 octets).</li>
+        <li>Nous chiffrons les « réponses au questionnaire » et la « photo de session » sur votre appareil avant téléversement, avec AES-GCM.</li>
+        <li>La clé de session est « enveloppée » pour chaque destinataire autorisé (tuteur/formateur/centre…) et stockée dans <code>session.e2ee.wrapped_keys</code>.</li>
+        <li>Si un destinataire n’a pas encore de clés disponibles, il est listé dans <code>pending_uids</code> afin de compléter l’enveloppement plus tard.</li>
+      </ul>
+    </div>
+
+    <p class="muted">
+      Cette conception signifie que le stockage cloud et la base de données conservent des <strong>données chiffrées</strong>, et le déchiffrement a lieu
+      sur les appareils qui détiennent les bonnes clés et dans le cadre des autorisations par rôle de l’application.
+    </p>
+
+    <details>
+      <summary>Stockons-nous quelque chose lié aux clés ?</summary>
+      <div class="hr"></div>
+      <p class="muted">
+        Pour garantir un accès continu aux données chiffrées sur plusieurs appareils (selon les paramètres du compte), le système conserve des éléments/sauvegardes <strong>chiffrés</strong>
+        liés aux clés de chiffrement dans le compte utilisateur. Ces données servent uniquement à activer les fonctions de chiffrement dans l’application
+        (telles que la récupération/la synchronisation) sous contrôle d’accès et autorisations.
+      </p>
+    </details>
+
+    <details>
+      <summary>Et la « photo du visage de l’enfant » ? La stockons-nous ?</summary>
+      <div class="hr"></div>
+      <p class="muted">
+        L’application analyse l’image sur l’appareil pour extraire des indicateurs (comme le sourire/l’orientation du visage) et les convertir en un « score ».
+        Ensuite — si vous choisissez d’enregistrer la session — l’image est téléversée comme partie des données de session <strong>chiffrée</strong> (non publique).
+      </p>
+    </details>
+
+    <p>
+      <span class="badge ok"><i></i>Mesures de sécurité supplémentaires</span>
+      <span class="badge"><i></i>Contrôles d’accès par rôle</span>
+      <span class="badge"><i></i>Règles d’accès (Firestore/Storage Rules)</span>
+    </p>
+  </div>
+</details>
+
+<details class="policy-sec" id="s8">
+  <summary><span class="title">8) Partage des données et qui peut y accéder ?</span></summary>
+  <div class="sec-body">
+    <p>L’application comporte plusieurs rôles. L’accès dépend du rôle et de la liaison/du partage :</p>
+    <ul>
+      <li><strong>Tuteur :</strong> Gère les individus liés et soumet des demandes de réservation aux centres.</li>
+      <li><strong>Centre :</strong> Gère les individus du centre et leurs sessions, reçoit les demandes de réservation et approuve/refuse/reprogramme.</li>
+      <li><strong>Formateur :</strong> Accède aux individus liés dans son périmètre et exécute des sessions selon les autorisations.</li>
+      <li><strong>Admin/Sous-admin :</strong> Autorisations administratives (avec des contraintes comme la limitation par pays pour le sous-admin, selon l’application).</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Quand partageons-nous vos données avec un tiers ?</strong>
+      <p class="muted" style="margin:0">
+        En général, nous ne partageons pas vos données en dehors de l’écosystème de l’application, sauf pour fournir le service (hébergement/notifications),
+        à votre demande (p. ex., partage d’un profil avec un centre spécifique) ou lorsque la loi l’exige.
+      </p>
+    </div>
+  </div>
+</details>
+
+<details class="policy-sec" id="s8a">
+  <summary><span class="title">8-A) Prestataires (sous-traitants) et partage des données</span></summary>
+  <div class="sec-body">
+    <p>
+      Pour fournir et exploiter l’application en toute sécurité, nous utilisons des prestataires (sous-traitants) qui traitent des données limitées en notre nom,
+      sous nos instructions et uniquement à des fins opérationnelles.
+    </p>
+
+    <div class="callout">
+      <strong>Prestataires utilisés :</strong>
+      <ul class="muted" style="margin:0; padding-left:18px">
+        <li>Services Google/Firebase (tels que l’authentification, la base de données, le stockage cloud, les notifications via FCM et des fonctions serveur si nécessaire).</li>
+      </ul>
+    </div>
+
+    <p class="muted">
+      Nous ne vendons pas vos données. Le partage des données n’a lieu que pour fournir le service, sur votre demande dans l’application (p. ex., partage avec un centre),
+      ou lorsque la loi l’exige.
+    </p>
+  </div>
+</details>
+
+<details class="policy-sec" id="s9">
+  <summary><span class="title">9) Notifications, FCM et communications</span></summary>
+  <div class="sec-body">
+    <p>
+      Pour envoyer des notifications (telles que des rappels de session ou des mises à jour de statut de réservation), nous utilisons Firebase Cloud Messaging (FCM).
+      Cela nécessite de stocker un « jeton d’appareil » lié à votre compte dans la base de données.
+    </p>
+    <p class="muted">
+      Nous conservons un historique des notifications dans l’application (titre/texte/heure/lien interne) afin de les afficher plus tard dans votre compte.
+    </p>
+    <p class="muted">
+      Certaines notifications peuvent inclure des données opérationnelles nécessaires pour ouvrir le bon écran dans l’application (comme un ID de demande de réservation ou un ID de session),
+      et nous n’utilisons pas les notifications à des fins publicitaires ni de suivi publicitaire.
+    </p>
+
+    <details>
+      <summary>Comment arrêter les notifications ?</summary>
+      <div class="hr"></div>
+      <ul>
+        <li>Depuis les paramètres de votre appareil : désactivez les notifications de l’application.</li>
+        <li>Dans l’application : il peut être nécessaire de relier à nouveau le jeton après un changement dans les paramètres système.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<details class="policy-sec" id="s10">
+  <summary><span class="title">10) Localisation et Google Maps</span></summary>
+  <div class="sec-body">
+    <p>
+      L’option de localisation est utilisée — si le centre le choisit — pour renseigner automatiquement un lien Google Maps sur la page publique du centre.
+      Si vous accordez l’autorisation, nous obtenons des coordonnées et les convertissons en lien Maps.
+    </p>
+    <div class="callout">
+      <strong>Important :</strong>
+      <p class="muted" style="margin:0">
+        Publier un lien Google Maps dans la page publique du centre peut révéler des coordonnées dans le lien si le centre le publie publiquement.
+        Vous pouvez laisser ce champ vide ou fournir un lien général ne contenant pas de coordonnées précises.
+      </p>
+    </div>
+  </div>
+</details>
+
+<details class="policy-sec" id="s11">
+  <summary><span class="title">11) Conservation et suppression des données</span></summary>
+  <div class="sec-body">
+    <ul>
+      <li><strong>Compte utilisateur :</strong> Conservé tant que le compte reste actif ou jusqu’à votre demande de suppression.</li>
+      <li><strong>Individus et sessions :</strong> Conservés tant que nécessaire pour suivre les progrès ou jusqu’à votre demande de suppression.</li>
+      <li><strong>Réservations :</strong> Conservées à des fins d’enregistrement opérationnel, puis peuvent être supprimées/archivées plus tard (selon les paramètres de l’app/admin).</li>
+      <li><strong>Jetons FCM :</strong> Peuvent être supprimés lors de la déconnexion/changement d’appareil, ou à votre demande.</li>
+    </ul>
+
+    <details>
+      <summary>Suppression finale : qu’est-ce qui est supprimé immédiatement vs. ce qui peut prendre du temps ?</summary>
+      <div class="hr"></div>
+      <p class="muted">
+        Lorsque vous demandez la suppression d’un compte ou de données spécifiques, nous travaillons à les supprimer de la base de données et des fichiers stockés dans la limite des capacités du système.
+        Certains enregistrements peuvent nécessiter du temps pour une suppression complète (p. ex., fichiers stockés ou sauvegardes techniques, le cas échéant) ou nous pouvons conserver un minimum d’enregistrements pour conformité
+        ou pour prévenir les abus si la loi l’exige.
+      </p>
+      <ul class="muted">
+        <li><strong>Suppression de compte :</strong> Inclut la désactivation/la suppression des données du compte selon les procédures du système.</li>
+        <li><strong>Suppression de profil/session :</strong> Inclut la suppression des enregistrements liés lorsque possible, et peut inclure la suppression des fichiers du stockage.</li>
+        <li><strong>Exceptions :</strong> Nous pouvons conserver un ensemble minimal d’enregistrements lorsqu’il existe une obligation légale ou une raison légitime de sécurité/d’exploitation.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<details class="policy-sec" id="s12">
+  <summary><span class="title">12) Vos droits au regard de la loi jordanienne</span></summary>
+  <div class="sec-body">
+    <p>
+      Les résumés de la loi jordanienne indiquent que les personnes concernées peuvent avoir des droits tels que : accès, retrait du consentement, correction/mise à jour des données,
+      demande de suppression (« droit à l’oubli »), opposition au traitement/profilage, obtention d’une copie/portabilité et signalement d’une violation de données.
+    </p>
+    <div class="callout">
+      <strong>Comment exercer vos droits dans Infinite Aura :</strong>
+      <ol class="muted" style="margin:0; padding-left:18px">
+        <li>Envoyez-nous un email à : <strong>app.asd.cure@gmail.com</strong> avec l’objet : « Demande de droits sur les données — Infinite Aura ».</li>
+        <li>Indiquez le type de demande : accès / modification / suppression / portabilité / retrait du consentement…</li>
+        <li>Incluez une preuve de propriété du compte (p. ex., email du compte ou numéro de téléphone enregistré) afin de protéger vos données.</li>
+        <li>Nous répondrons dans un délai raisonnable selon la taille/la complexité de la demande et conformément à la loi.</li>
+      </ol>
+    </div>
+  </div>
+</details>
+
+<details class="policy-sec" id="s13">
+  <summary><span class="title">13) Transferts internationaux de données (hors Jordanie)</span></summary>
+  <div class="sec-body">
+    <p>Les données de l’application sont hébergées via des services cloud (Firebase/Google Cloud).</p>
+    <details>
+      <summary>Ce que nous faisons pour réduire les risques liés aux transferts</summary>
+      <div class="hr"></div>
+      <ul>
+        <li>Nous utilisons la quantité minimale de données nécessaire pour fournir le service.</li>
+        <li>Nous appliquons le chiffrement de bout en bout pour le contenu sensible des sessions afin qu’il reste illisible même lorsqu’il est hébergé.</li>
+        <li>Nous suivons les mises à jour réglementaires en Jordanie (telles que les règlements de l’Unité de protection des données personnelles).</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<details class="policy-sec" id="s13a">
+  <summary><span class="title">13-A) Utilisateurs hors de Jordanie (portée internationale)</span></summary>
+  <div class="sec-body">
+    <p>
+      Nous sommes un responsable du traitement basé dans le Royaume hachémite de Jordanie, et nous respectons la Loi jordanienne sur la protection des données personnelles.
+      Selon votre lieu de résidence, d’autres lois sur la confidentialité peuvent également s’appliquer (telles que les lois de l’UE ou d’autres lois locales).
+    </p>
+    <p class="muted">
+      Si des exigences obligatoires s’appliquent dans votre juridiction concernant les droits de confidentialité ou le traitement, nous y répondrons comme requis
+      et dans la mesure du possible compte tenu de la nature du service.
+    </p>
+  </div>
+</details>
+
+<details class="policy-sec" id="s14">
+  <summary><span class="title">14) Comment nous contacter (réclamations et demandes)</span></summary>
+  <div class="sec-body">
+    <div class="callout">
+      <strong>Canaux officiels de contact :</strong>
+      <p class="muted" style="margin:0">
+        Email confidentialité : <strong>app.asd.cure@gmail.com</strong><br/>
+        Support général : <strong>app.asd.cure@gmail.com</strong><br/>
+        Adresse : <strong>Jordanie — Gouvernorat d’Aqaba</strong>
+      </p>
+    </div>
+    <p class="muted">
+      Si vous avez une réclamation de confidentialité ou de sécurité, veuillez inclure : (type de compte, description du problème, date/heure, captures d’écran si disponibles).
+    </p>
+    <div class="callout">
+      <strong>Demandes de suppression de données/compte :</strong>
+      <p class="muted" style="margin:0">
+        Pour demander la suppression d’un compte ou de données spécifiques, envoyez-nous un email à <strong>app.asd.cure@gmail.com</strong> avec l’objet :
+        <strong>Demande de suppression des données — Infinite Aura</strong>, et incluez l’email du compte/le numéro de téléphone enregistré pour vérification.
+      </p>
+    </div>
+  </div>
+</details>
+
+<details class="policy-sec" id="s15">
+  <summary><span class="title">15) Modifications de la politique</span></summary>
+  <div class="sec-body">
+    <p>
+      Nous pouvons mettre à jour cette politique lorsque nous ajoutons de nouvelles fonctionnalités (telles que des analyses, des intégrations externes ou des changements légaux).
+      Lors d’une mise à jour, nous modifierons la date « Dernière mise à jour » en haut de la page, et nous pourrons envoyer un avis dans l’application si nécessaire.
+    </p>
+  </div>
+</details>
+<!-- ===================== END POLICY SECTIONS ===================== -->
+
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <div class="footer">
+      <strong>Annexe (brève transparence technique) :</strong>
+      <p class="muted" style="margin-top:8px">
+        Cette politique a été rédigée pour correspondre au fonctionnement d’Infinite Aura (chiffrement de bout en bout pour les sessions, chemins de stockage et jetons FCM),
+        et pour s’aligner sur des résumés fiables de la Loi jordanienne sur la protection des données personnelles n° 24 de 2023 (consentement, droits, transferts transfrontaliers).
+      </p>
+      <p class="muted" style="margin:0">
+        © <span id="year"></span> <strong>Infinite Aura</strong>. Tous droits réservés.
+      </p>
+    </div>
+  </div>
+
+<script>
+  // Dynamic year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Policy sections only (excluding mobile TOC)
+  const policyDetails = Array.from(document.querySelectorAll("details.policy-sec"));
+
+  // Open/close all sections (policy only)
+  function toggleAll(open){
+    policyDetails.forEach(d => d.open = !!open);
+  }
+
+  // Accordion: opening one closes the others
+  let allowMultipleOpen = false; // temporarily changed when opening/closing all
+  policyDetails.forEach(d => {
+    d.addEventListener("toggle", () => {
+      if (!d.open) return;
+      if (allowMultipleOpen) return;
+      policyDetails.forEach(other => {
+        if (other !== d) other.open = false;
+      });
+    });
+  });
+
+  // When clicking "Open all", temporarily disable accordion behavior
+  const _toggleAll = toggleAll;
+  toggleAll = function(open){
+    allowMultipleOpen = true;
+    _toggleAll(open);
+    setTimeout(() => { allowMultipleOpen = false; }, 0);
+  };
+
+  // Highlight active TOC link
+  const tocLinksDesktop = Array.from(document.querySelectorAll("#toc a"));
+  const tocLinksMobile = Array.from(document.querySelectorAll("#tocMobile a"));
+  const allLinks = [...tocLinksDesktop, ...tocLinksMobile];
+  const linkMap = new Map(allLinks.map(a => [a.getAttribute("href"), a]));
+
+  function setActive(id){
+    allLinks.forEach(a => a.classList.remove("active"));
+    const a = linkMap.get("#" + id);
+    if(a) a.classList.add("active");
+    tocLinksDesktop.forEach(x => { if(x.getAttribute("href")==="#" + id) x.classList.add("active"); });
+    tocLinksMobile.forEach(x => { if(x.getAttribute("href")==="#" + id) x.classList.add("active"); });
+  }
+
+  // If a TOC link is clicked: open the section before scrolling
+  allLinks.forEach(a => {
+    a.addEventListener("click", () => {
+      const href = a.getAttribute("href");
+      if(!href || !href.startsWith("#")) return;
+      const id = href.slice(1);
+      const target = document.getElementById(id);
+      if(target && target.matches("details.policy-sec")){
+        target.open = true;
+      }
+    });
+  });
+
+  // Observer on details instead of section
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      setActive(e.target.id);
+    });
+  }, { rootMargin: "-45% 0px -50% 0px", threshold: 0.01 });
+
+  policyDetails.forEach(d => observer.observe(d));
+
+  // Close mobile TOC after click
+  document.querySelectorAll("#tocMobile a").forEach(a=>{
+    a.addEventListener("click", ()=>{
+      const details = document.querySelector("details.tocMobile");
+      if(details) details.open = false;
+    });
+  });
+</script>
+
+</body>
+</html>
